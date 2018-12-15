@@ -78,10 +78,10 @@ var Movie = React.createClass({
 
     render: function () {
         return (
-            React.createElement('li', {key:this.props.movie.id}),
+            React.createElement('li', {key:this.props.movie.id, style: {margin: "100px", textAlign: "center" }},
             React.createElement(MovieTitle, {title: this.props.movie.title}),
             React.createElement(MovieDesc, {desc: this.props.movie.desc}),
-            React.createElement(MovieImage, {image: this.props.movie.image}) 
+            React.createElement(MovieImage, {image: this.props.movie.image})) 
         );
     }
 });
@@ -93,8 +93,8 @@ var moviesElements = movies.map(function(movie) {
 
   var MoviesList =
     React.createElement('div', {},
-      React.createElement('h1', {}, 'Lista filmów'),
-      React.createElement('ul', {}, moviesElements)
+      React.createElement('h1', {style: {textAlign: "center", marginTop: "50px"}}, 'Lista filmów'),
+      React.createElement('ul', { style: {display: "flex", flexWrap: "wrap", justifyContent: "space-around", margin: "30px"}}, moviesElements)
     );
   
   ReactDOM.render(MoviesList, document.getElementById('app'));
