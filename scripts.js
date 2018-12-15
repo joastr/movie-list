@@ -60,7 +60,7 @@ var MovieDesc = React.createClass({
 
 var MovieImage = React.createClass({
     propTypes: {
-        img: React.PropTypes.string.isRequired,
+        image: React.PropTypes.string.isRequired,
     },
 
     render: function(){
